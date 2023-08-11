@@ -1,2 +1,2 @@
 # RNSource
-React-native source code compilation, generate aar file.
+React-native pure source code project, used to modify source code issues, compile and generate aar files.
