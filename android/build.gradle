@@ -10,11 +10,6 @@ buildscript {
         // We use NDK 23 which has both M1 support and is the side-by-side NDK version from AGP.
         ndkVersion = "23.1.7779620"
     }
-    dependencies {
-        classpath("com.android.tools.build:gradle")
-        classpath 'de.undercouch:gradle-download-task:5.0.1'
-        classpath("com.facebook.react:react-native-gradle-plugin")
-    }
     repositories {
         // 以下四行添加阿里云的仓库地址，方便国内开发者下载相关插件
         maven {
@@ -26,6 +21,11 @@ buildscript {
         maven { url 'https://maven.aliyun.com/repository/public' }
         google()
         mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("de.undercouch:gradle-download-task:5.3.0")
     }
 }
 
@@ -46,3 +46,5 @@ allprojects {
         mavenCentral()
     }
 }
+
+
