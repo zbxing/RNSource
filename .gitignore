@@ -36,7 +36,10 @@ local.properties
 
 # node.js
 #
-node_modules/
+node_modules/*
+!/node_modules/react-native/
+# node_modules/react-native/ReactAndroid/.cxx/
+# node_modules/react-native/ReactAndroid/build/
 npm-debug.log
 yarn-error.log
 
