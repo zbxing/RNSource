@@ -1,0 +1,2 @@
+react-android-0.72.3-debug.aar filter=lfs diff=lfs merge=lfs -text
+react-android-0.72.3-release.aar filter=lfs diff=lfs merge=lfs -text

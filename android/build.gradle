@@ -1,4 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+// 终端编译源码生成aar命令: ./gradlew :ReactAndroid:installArchives --no-daemon
 
 buildscript {
     ext {
