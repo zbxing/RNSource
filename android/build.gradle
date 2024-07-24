@@ -1,51 +1,21 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-// 终端编译源码生成aar命令: ./gradlew :ReactAndroid:installArchives --no-daemon
-
 buildscript {
     ext {
-        buildToolsVersion = "33.0.0"
-        minSdkVersion = 21
-        compileSdkVersion = 33
-        targetSdkVersion = 33
-
-        // We use NDK 23 which has both M1 support and is the side-by-side NDK version from AGP.
-        ndkVersion = "23.1.7779620"
+        buildToolsVersion = "34.0.0"
+        minSdkVersion = 23
+        compileSdkVersion = 34
+        targetSdkVersion = 34
+        ndkVersion = "26.1.10909125"
+        kotlinVersion = "1.9.22"
     }
     repositories {
-        // 以下四行添加阿里云的仓库地址，方便国内开发者下载相关插件
-        maven {
-            url 'https://maven.aliyun.com/repository/jcenter'
-            artifactUrls ('https://maven.aliyun.com/repository/central', 'https://repo1.maven.org/maven2/')
-        }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        maven { url 'https://maven.aliyun.com/repository/public' }
         google()
         mavenCentral()
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("de.undercouch:gradle-download-task:5.3.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
     }
 }
 
-allprojects {
-    configurations.all {
-        exclude group: 'com.facebook.react', module: 'react-native'
-    }
-    repositories {
-        // 以下四行添加阿里云的仓库地址，方便国内开发者下载相关插件
-        maven {
-            url 'https://maven.aliyun.com/repository/jcenter'
-            artifactUrls ('https://maven.aliyun.com/repository/central', 'https://repo1.maven.org/maven2/')
-        }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        google()
-        mavenCentral()
-    }
-}
-
-
+apply plugin: "com.facebook.react.rootproject"

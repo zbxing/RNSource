@@ -1,9 +1,0 @@
-
-allprojects {
-	gradle.projectsLoaded {
-		rootProject.allprojects {
-			buildDir = "/path/to/build/directory/${rootProject.name}/${project.name}"
-		}
-	}
-}
-
