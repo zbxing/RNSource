@@ -1,3 +1,6 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// 终端编译源码生成aar命令: ./gradlew :ReactAndroid:installArchives --no-daemon
+
 buildscript {
     ext {
         buildToolsVersion = "34.0.0"
@@ -15,6 +18,7 @@ buildscript {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+        classpath("de.undercouch:gradle-download-task:5.3.0")
     }
 }
 
