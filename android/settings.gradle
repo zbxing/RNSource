@@ -3,13 +3,8 @@ apply from: file("../node_modules/@react-native-community/cli-platform-android/n
 include ':app'
 includeBuild('../node_modules/@react-native/gradle-plugin')
 
-include ':ReactAndroid'
-project(':ReactAndroid').projectDir = new File(rootProject.projectDir, '../node_modules/react-native/ReactAndroid')
-//project(':ReactAndroid').projectDir = new File(rootProject.projectDir, '../node_modules/react-native/packages/react-native/ReactAndroid')
-
-include(":ReactAndroid:hermes-engine")
-project(":ReactAndroid:hermes-engine").projectDir = file('../node_modules/react-native/ReactAndroid/hermes-engine')
-
-
-//include(":packages:react-native:ReactAndroid:hermes-engine")
-//project(":packages:react-native:ReactAndroid:hermes-engine").projectDir = file('../node_modules/react-native/packages/react-native/ReactAndroid/hermes-engine')
+//include ':ReactAndroid'
+//project(':ReactAndroid').projectDir = new File(rootProject.projectDir, '../node_modules/react-native/ReactAndroid')
+//
+//include(":ReactAndroid:hermes-engine")
+//project(":ReactAndroid:hermes-engine").projectDir = file('../node_modules/react-native/ReactAndroid/hermes-engine')
