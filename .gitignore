@@ -38,6 +38,8 @@ local.properties
 #
 node_modules/
 !node_modules/react-native/
+node_modules/react-native/sdks/hermes/API/hermes_sandbox/
+node_modules/react-native/sdks/hermesc/
 node_modules/react-native/ReactAndroid/.cxx/
 node_modules/react-native/ReactAndroid/build/
 npm-debug.log
